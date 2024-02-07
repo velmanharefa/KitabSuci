@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kitab_suci/screen/intropage3.dart';
 
 class introPage extends StatefulWidget {
   const introPage({super.key});
@@ -8,6 +9,11 @@ class introPage extends StatefulWidget {
 }
 
 class _introPageState extends State<introPage> {
+  void _next() {
+    Navigator.push(
+      context, MaterialPageRoute(builder: (context) => const introPage3()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,8 +38,6 @@ class _introPageState extends State<introPage> {
             height: 100,
           ),
 
-          
-
           Container(
             alignment: Alignment.center,
             // width: 380,
@@ -51,7 +55,7 @@ class _introPageState extends State<introPage> {
                   "assets/images/gambarIntro.png",
                 ),
 
-                SizedBox(height: 8,),
+                SizedBox(height: 10,),
 
                 Text(
                   "Complete Scripture",
@@ -72,7 +76,27 @@ class _introPageState extends State<introPage> {
                 ),
               ],
             ),
-          )
+          ),
+
+          Container(
+            margin: const EdgeInsets.only(top: 10),
+                alignment: Alignment.center,
+                child: ElevatedButton(
+                  onPressed: _next,
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    backgroundColor: const Color(0xff4DACB2), // Ubah warna teks
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    minimumSize: const Size(217, 51),
+                  ),
+                  child: const Text(
+                    'Next',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ),
+          ),
 
           
         ],
