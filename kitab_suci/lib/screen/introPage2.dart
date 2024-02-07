@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kitab_suci/screen/introPage.dart';
 
 class introPage2 extends StatefulWidget {
   const introPage2({super.key});
@@ -8,6 +9,14 @@ class introPage2 extends StatefulWidget {
 }
 
 class _introPage2State extends State<introPage2> {
+  void _next() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const introPage2()));
+  }
+  void _back() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const introPage()));
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,11 +26,26 @@ class _introPage2State extends State<introPage2> {
             height: 60,
           ),
           Container(
+            // decoration: BoxDecoration(
+            //   border: Border.all(
+            //     color: Colors.black, // Warna outline
+            //     width: 2, // Ketebalan outline
+            //   ),
+            // ),
             alignment: Alignment.centerRight,
-            margin: EdgeInsets.only(right: 20),
-            child: Column(
+            margin: EdgeInsets.only(right: 20, left: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(
+                IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: _back,
+                  ),
+                  SizedBox(
+                    width: 230,
+                  ),
+                InkWell(
+                  child: Text(
                   'Skip',
                   style: TextStyle(
                     color: Color(0xFF4DACB2),
@@ -30,7 +54,15 @@ class _introPage2State extends State<introPage2> {
                     fontFamily: 'Inter',
                     
                     ),
-                )
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const introPage2()));
+                } ,
+                ),
+                
               ],
               ),
             ),
@@ -39,12 +71,6 @@ class _introPage2State extends State<introPage2> {
             ),
 
             Container(
-              decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.black, // Warna outline
-                width: 2, // Ketebalan outline
-              ),
-            ),
               child: Image.asset(
                 alignment: Alignment.center,
                 "assets/images/laki.png",
@@ -59,12 +85,6 @@ class _introPage2State extends State<introPage2> {
             alignment: Alignment.center,
             width: 380,//kiri kanan
             height: 130,//atas bawah
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: const Color.fromARGB(255, 255, 1, 1),
-                width: 2,
-              ),
-            ),
             child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -95,8 +115,7 @@ class _introPage2State extends State<introPage2> {
 
           Container(
             child: ElevatedButton(
-              onPressed: (){
-              },
+              onPressed: _next,
               style: ElevatedButton.styleFrom(
                 foregroundColor: const Color.fromARGB(255, 0, 0, 0),
                 backgroundColor: Color(0xFF4DACB2),
@@ -106,7 +125,7 @@ class _introPage2State extends State<introPage2> {
                 minimumSize: const Size(217, 52),
                 ),
               child: const Text(
-                'Sign In',
+                'Next',
                 style: TextStyle(
                   color: Color(0xFFffffff) 
                 ),
