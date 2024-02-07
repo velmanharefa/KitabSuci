@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:kitab_suci/screen/introPage.dart';
+import 'package:kitab_suci/screen/introPage2.dart';
 import 'package:kitab_suci/screen/splashscreen.dart';
 import 'package:kitab_suci/screen/loginPage.dart';
 
