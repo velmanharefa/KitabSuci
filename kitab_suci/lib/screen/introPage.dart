@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kitab_suci/screen/intropage3.dart';
+import 'package:kitab_suci/screen/intropage2.dart';
 
 class introPage extends StatefulWidget {
   const introPage({super.key});
@@ -11,7 +11,7 @@ class introPage extends StatefulWidget {
 class _introPageState extends State<introPage> {
   void _next() {
     Navigator.push(
-      context, MaterialPageRoute(builder: (context) => const introPage3()));
+      context, MaterialPageRoute(builder: (context) => const introPage2()));
   }
 
   @override
@@ -20,7 +20,7 @@ class _introPageState extends State<introPage> {
       body: Column(
         children: [
           SizedBox(
-            height: 50,
+            height: 60,
           ),
       
           Container(
@@ -29,7 +29,10 @@ class _introPageState extends State<introPage> {
             child: Text(
               "Skip",
               style: TextStyle(
-                fontSize: 24,
+                color: Color(0xFF4DACB2),
+                fontSize: 20, 
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Inter',
               ),
             ),
           ),
@@ -42,12 +45,6 @@ class _introPageState extends State<introPage> {
             alignment: Alignment.center,
             // width: 380,
             // height: 250,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Color(0xFFABABAB),
-                width: 2,
-              )
-            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

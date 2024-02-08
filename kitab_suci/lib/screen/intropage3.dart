@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kitab_suci/screen/introPage2.dart';
 import 'package:kitab_suci/screen/loginPage.dart';
 
 class introPage3 extends StatefulWidget {
@@ -11,7 +12,12 @@ class introPage3 extends StatefulWidget {
 class _introPage3State extends State<introPage3> {
   void _start() {
     Navigator.push(
-      context, MaterialPageRoute(builder: (context) => const introPage3()));
+      context, MaterialPageRoute(builder: (context) => const loginPage()));
+  }
+
+  void _back() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const introPage2()));
   }
 
   @override
@@ -20,19 +26,50 @@ class _introPage3State extends State<introPage3> {
       body: Column(
         children: [
           SizedBox(
-            height: 50,
+            height: 60,
           ),
       
           Container(
-            alignment: Alignment.topLeft,
-            margin: EdgeInsets.only(right: 16),
-            child: Text(
-              "Skip",
-              style: TextStyle(
-                fontSize: 24,
+            // decoration: BoxDecoration(
+            //   border: Border.all(
+            //     color: Colors.black, // Warna outline
+            //     width: 2, // Ketebalan outline
+            //   ),
+            // ),
+            alignment: Alignment.centerRight,
+            margin: EdgeInsets.only(right: 20, left: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: _back,
+                  ),
+                  SizedBox(
+                    width: 230,
+                  ),
+                InkWell(
+                  child: Text(
+                  'Skip',
+                  style: TextStyle(
+                    color: Color(0xFF4DACB2),
+                    fontSize: 20, 
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Inter',
+                    
+                    ),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const introPage2()));
+                } ,
+                ),
+                
+              ],
               ),
             ),
-          ),
 
           SizedBox(
             height: 10,
@@ -42,12 +79,7 @@ class _introPage3State extends State<introPage3> {
             alignment: Alignment.center,
             // width: 380,
             // height: 250,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Color(0xFFABABAB),
-                width: 2,
-              )
-            ),
+            
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

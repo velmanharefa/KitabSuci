@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kitab_suci/screen/introPage.dart';
+import 'package:kitab_suci/screen/introPage3.dart';
 
 class introPage2 extends StatefulWidget {
   const introPage2({super.key});
@@ -11,7 +12,7 @@ class introPage2 extends StatefulWidget {
 class _introPage2State extends State<introPage2> {
   void _next() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const introPage2()));
+        context, MaterialPageRoute(builder: (context) => const introPage3()));
   }
   void _back() {
     Navigator.push(
@@ -89,7 +90,7 @@ class _introPage2State extends State<introPage2> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Complete Scripture',
+                'Akses Bebas',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
