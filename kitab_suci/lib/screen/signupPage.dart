@@ -58,7 +58,7 @@ class _singUpPageState extends State<singUpPage> {
                 Container(
                   height: 60,
                   child: Text(
-                    "Welcome!",
+                    "Hi!",
                     style: TextStyle(
                       fontSize: 48,
                       color: Color(0xFF4DACB2), 
@@ -67,7 +67,7 @@ class _singUpPageState extends State<singUpPage> {
                 ),
                 Container(
                   child: Text(
-                    "Sign in to continue",
+                    "Create a new account",
                     style: TextStyle(
                       fontSize: 16,
                       color: Color(0xFFABABAB), 
@@ -150,7 +150,25 @@ class _singUpPageState extends State<singUpPage> {
                     ),
                   ),
                 ),
-
+              Container(
+            margin: const EdgeInsets.only(top: 10),
+                alignment: Alignment.center,
+                child: ElevatedButton(
+                  onPressed: _back,
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    backgroundColor: const Color(0xff4DACB2), // Ubah warna teks
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    minimumSize: const Size(217, 51),
+                  ),
+                  child: const Text(
+                    'Start',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ),
+          ),
 
 
 
