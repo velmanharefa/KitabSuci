@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kitab_suci/screen/accountPage.dart';
 import 'package:kitab_suci/screen/introPage.dart';
 import 'package:kitab_suci/screen/introPage2.dart';
 import 'package:kitab_suci/screen/loginPage.dart';
