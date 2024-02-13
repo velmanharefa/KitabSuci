@@ -28,7 +28,7 @@ class _singUpPageState extends State<singUpPage> {
 
   void _resetPosition() {
     _scrollController.animateTo(0.0,
-        duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
+        duration: Duration(milliseconds: 70), curve: Curves.easeInOut);
     FocusScope.of(context).unfocus();
   }
   Widget build(BuildContext context) {
@@ -189,13 +189,13 @@ class _singUpPageState extends State<singUpPage> {
                     ),
                 ),
               SizedBox(height: 150)
-                  ],
-                )
+                        ],
+                      )
+                  ),
+                ]
               ),
-            ]
-              ),
-        ),
-      )
-        );
+          ),
+        )
+      );
   }
 }
