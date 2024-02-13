@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kitab_suci/screen/introPage2.dart';
 import 'package:kitab_suci/screen/loginPage.dart';
+import 'package:kitab_suci/screen/signUpPage.dart';
+
 
 class introPage3 extends StatefulWidget {
   const introPage3({super.key});
@@ -14,6 +16,7 @@ class _introPage3State extends State<introPage3> {
     Navigator.push(
       context, MaterialPageRoute(builder: (context) => const loginPage()));
   }
+
 
   void _back() {
     Navigator.push(
@@ -180,7 +183,7 @@ class _introPage3State extends State<introPage3> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const loginPage()));
+                            builder: (context) => const singUpPage()));
                   },
                 ),
               ],
