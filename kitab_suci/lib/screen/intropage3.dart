@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kitab_suci/screen/introPage2.dart';
 import 'package:kitab_suci/screen/loginPage.dart';
 
+
 class introPage3 extends StatefulWidget {
   const introPage3({super.key});
 

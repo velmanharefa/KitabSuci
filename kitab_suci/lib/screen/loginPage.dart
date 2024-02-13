@@ -10,8 +10,13 @@ class loginPage extends StatefulWidget {
 }
 
 class _loginPageState extends State<loginPage> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  bool _secureText = true;
+  TextEditingController _editController = TextEditingController();
+
+  void _login() {
+    Navigator.push(
+      context, MaterialPageRoute(builder: (context) => const introPage3()));
+  }
 
   void _back() {
     Navigator.push(
@@ -21,6 +26,7 @@ class _loginPageState extends State<loginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           SizedBox(
@@ -81,7 +87,7 @@ class _loginPageState extends State<loginPage> {
             )
           ),
           
-          SizedBox(height: 50),
+          SizedBox(height: 10),
 
           Container(
             child: Image.asset(
@@ -89,88 +95,110 @@ class _loginPageState extends State<loginPage> {
             ),
           ),
 
-          SizedBox(height: 50),
+          SizedBox(height: 10),
           
-          // Container(
-          //   width: 300,
-          //   decoration: BoxDecoration(
-          //     border: Border.all(
-          //       color: Colors.black, // Warna outline
-          //       width: 2, // Ketebalan outline
-          //     ),
-          //   ),
-          //   child: Column(
-              
-          //     crossAxisAlignment:CrossAxisAlignment.start,
-          //     children: [
-          //       _buildGreyText("Enter email"),
-          //       const SizedBox(height: 10,),
-          //       _buildGreyText("Enter password"),
-          //       _buildInputField(emailController),
-          //     ]
-          //     ),
-          // ),
-          
+          Container(
+            width: 300,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  TextField(
+                    controller: _editController,
+                    decoration: InputDecoration(
+                      hintText: "Enter email",
+                      labelText: "Email",
+                      errorText: null,
+                      labelStyle: TextStyle(
+                        fontSize: 14,
+                        color: Color(0xFF4DACB2),
+                      ),
+                      // border: InputBorder.none,
+                      // fillColor: Colors.grey,
+                      // filled: true,
+                    ),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: "Enter password",
+                      labelText: "Password",
+                      // border: OutlineInputBorder(),
+                      labelStyle: TextStyle(
+                        fontSize: 14,
+                        color: Color(0xFF4DACB2),
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(_secureText ? Icons.remove_red_eye : Icons.visibility_off),
+                        onPressed: (){
+                          setState(() {
+                            _secureText = !_secureText;
+                          });
+                        },
+                      ),
+                    ),
+                    // keyboardType: TextInputType.emailAddress,
+                    obscureText: _secureText,
+                    maxLength: 10,
+                  ),
 
-          // Container(
-          //   width: 271,
-          //   child: Column(
-          //     children: [
-          //       Container(
-          //         alignment: Alignment.centerLeft,
-          //         child: Text(
-          //           "Enter email",
-          //           style: TextStyle(
-          //             fontSize: 14,
-          //             color: Color(0xFFABABAB),
-          //           ),
-          //         ),
-          //       ),
-          //       Container(
-          //         width: 271,
-          //         // decoration: BoxDecoration(
-          //         //   border: Border.all(
-          //         //     color: Colors.black,
-          //         //     width: 2,
-          //         //   )
-          //         // ),
-          //         child: Divider(
-          //           height: 20,
-          //           color: Colors.black,
-          //           thickness: 1,
-          //         ),
-          //       )
-          //     ]
-          //     ),
-          // )
+                SizedBox(height: 10),
+                
+                Container(
+                  margin: const EdgeInsets.only(top: 10),
+                      alignment: Alignment.center,
+                      child: ElevatedButton(
+                        onPressed: _login,
+                        style: ElevatedButton.styleFrom(
+                          foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                          backgroundColor: const Color(0xff4DACB2), // Ubah warna teks
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          minimumSize: const Size(217, 51),
+                        ),
+                        child: const Text(
+                          'Login',
+                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                ),
+
+
+                // SizedBox(height: 10),
+
+                Container(
+                    width: 300,
+                    // decoration: BoxDecoration(
+                    //   border: Border.all(
+                    //     color: Colors.black, // Warna outline
+                    //     width: 2, // Ketebalan outline
+                    //   ),
+                    // ),
+                    child: InkWell(
+                    child: const Text(
+                      textAlign: TextAlign.center,
+                      'Forgot password?',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFFABABAB),
+                        ),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const loginPage()));
+                    },
+                  ),
+                ),
+
+                ],
+              )
+            ),
+          ),
+
         ],
       ),
     );
-  }
-
-  Widget _buildForm(){
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          "Welcome",
-          style: TextStyle(
-            fontSize: 32,
-          ),
-        )
-      ],
-    );
-  }
-
-  Widget _buildGreyText(String text){
-    return Text(
-      text,
-      style: const TextStyle(color: Colors.grey),
-    );
-  }
-
-  Widget _buildInputField(TextEditingController controller, {isPassword = false}) {
-    return TextField();
   }
 
 }
