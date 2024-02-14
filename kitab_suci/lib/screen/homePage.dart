@@ -12,7 +12,26 @@ class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      body: Column(
+        children: [
+          SizedBox(height: 60,), 
+          Container(
+            alignment: Alignment.center,
+            width: 300,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black,
+                width: 2
+              )
+            ),
+            child: Text(
+              "Valo"
+            ),
+          )
+        ],
+      ),
+
+
       bottomNavigationBar: CurvedNavigationBar(
         height: 55,
         backgroundColor: Colors.white,
