@@ -25,7 +25,7 @@ class _homePageState extends State<homePage> {
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 50),
+            SizedBox(height: 30),
 
             Container(
               width: 500,
@@ -67,7 +67,7 @@ class _homePageState extends State<homePage> {
               ),
             ),
 
-            SizedBox(height: 5),
+            SizedBox(height: 40),
 
             Container(
               alignment: Alignment.center,
@@ -228,7 +228,9 @@ class _homePageState extends State<homePage> {
             ),
 
             Container(
+              
               height: 50,
+              width: 100,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
                 border : Border.all(

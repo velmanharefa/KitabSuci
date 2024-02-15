@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kitab_suci/screen/loginPage.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class accountPage extends StatefulWidget {
   const accountPage({super.key});
@@ -8,6 +10,11 @@ class accountPage extends StatefulWidget {
 }
 
 class _accountPageState extends State<accountPage> {
+void _notification() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const loginPage()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +22,40 @@ class _accountPageState extends State<accountPage> {
         painter:BluePainter(),
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,)
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(height: 30),
+
+            Container(
+              width: 500,
+              alignment: Alignment.center,
+              // decoration: BoxDecoration(
+              //   border: Border.all(
+              //     color: Colors.black,
+              //     width: 2,
+              //   )
+              // ),
+              child: Column(
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  
+                  InkWell(
+                    child: Text(
+                      textAlign: TextAlign.center,
+                      'Profile',
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Color(0xff000000),
+                      fontWeight: FontWeight.bold,
+                    ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ],
+            )
           )
         ),
     );
@@ -31,7 +71,7 @@ class BluePainter extends CustomPainter {
 
     Path mainBackground = Path();
     mainBackground.addRect(Rect.fromLTRB(0, 0, width, height));
-    paint.color = Colors.black;
+    paint.color = Colors.white;
     canvas.drawPath(mainBackground, paint);
 
   Path ovalPath = Path();
@@ -40,27 +80,15 @@ class BluePainter extends CustomPainter {
 
     //paint a curve from current position to middle of the screen
     ovalPath.quadraticBezierTo(
-        0, height*0.1, 0,height*0.2);
+        0, height*0.2, 0,height*0.15);
     ovalPath.quadraticBezierTo(
-        width, height*0.3, width,0);
+        width, height*0.2, width,height*0.15);
 
-    // ovalPath.conicTo(
-    //   size.width / 1, 1 * size.height / 2, size.width, 0, 20
-    // );
-
-
-    // ovalPath.relativeCubicTo(size.width / 4, 3 * size.height / 4, 3 * size.width / 4, size.height / 4, size.width, 0);
-
-    // // Paint a curve from current position to bottom left of screen at width * 0.1
-    // ovalPath.quadraticBezierTo(width * 0.1, height * 0.8, width * 0.5, height);
-
-    // draw remaining line to bottom left side
     ovalPath.lineTo(width,0);
 
-    // // Close line to reset it back
     ovalPath.close();
 
-    paint.color = Color(0xFF4DACB2);
+    paint.color = Color(0xFF64FCD9);
     canvas.drawPath(ovalPath, paint);
   }
 
