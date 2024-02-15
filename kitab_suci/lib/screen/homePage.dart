@@ -29,6 +29,7 @@ class _homePageState extends State<homePage> {
 
             Container(
               width: 500,
+              height: 40,
               // decoration: BoxDecoration(
               //   border: Border.all(
               //     color: Colors.black,
@@ -66,8 +67,26 @@ class _homePageState extends State<homePage> {
                 ],
               ),
             ),
+            
+            Container(
+              width: 500,
+              height: 25,
+              // decoration: BoxDecoration(
+              //   border: Border.all(
+              //     color: Colors.black,
+              //     width: 2,
+              //   )
+              // ),
+              child: Text(
+                'let’s read some word of God',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Color(0xff000000)
+                ),
+              ),
+            ),
 
-            SizedBox(height: 40),
+            SizedBox(height: 20),
 
             Container(
               alignment: Alignment.center,
