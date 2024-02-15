@@ -10,6 +10,11 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
+  void _notification() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const loginPage()));
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,8 +24,50 @@ class _homePageState extends State<homePage> {
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 120),
-            
+            SizedBox(height: 50),
+
+            Container(
+              width: 500,
+              // decoration: BoxDecoration(
+              //   border: Border.all(
+              //     color: Colors.black,
+              //     width: 2,
+              //   )
+              // ),
+              child: Row(
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  
+                  InkWell(
+                    child: Text(
+                      'Hello, User',
+                    style: TextStyle(
+                      fontSize: 32,
+                      color: Color(0xff000000)
+                    ),
+                    ),
+                  ),
+
+                  GestureDetector(
+                    onTap: _notification,
+                    child: Container(
+                      width: 40, 
+                      height: 40, 
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0xFF4DACB2),
+                        // color: Colors.grey[200], 
+                      ),
+                      child: Icon(Icons.notifications_none_rounded, color: Colors.white),
+                    ),
+                  ),           
+                ],
+              ),
+            ),
+
+            SizedBox(height: 5),
+
             Container(
               alignment: Alignment.center,
               height: 50,
@@ -98,20 +145,24 @@ class _homePageState extends State<homePage> {
             SizedBox(height: 5),
 
             Container(
-              height: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.0),
-                border : Border.all(
-                  color: Colors.black,
-                  width: 1,
-                )
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-
-                children: [
-                  InkWell(
-                    child: const Text(
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => loginPage()),
+                  );
+                },
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.0),
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 1,
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
                       'Sorry you need login',
                       style: TextStyle(
                         color: Color(0xFF4DACB2),
@@ -119,14 +170,8 @@ class _homePageState extends State<homePage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    onTap: (){
-                      Navigator.push(
-                        context, 
-                        MaterialPageRoute(
-                          builder: (context) => const loginPage()));
-                    },
                   ),
-                ],
+                ),
               ),
             ),
 
@@ -230,20 +275,24 @@ class _homePageState extends State<homePage> {
             SizedBox(height: 5),
 
             Container(
-              height: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.0),
-                border : Border.all(
-                  color: Colors.black,
-                  width: 1,
-                )
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-
-                children: [
-                  InkWell(
-                    child: const Text(
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => loginPage()),
+                  );
+                },
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.0),
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 1,
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
                       'Sorry you need login',
                       style: TextStyle(
                         color: Color(0xFF4DACB2),
@@ -251,15 +300,31 @@ class _homePageState extends State<homePage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    onTap: (){
-                      Navigator.push(
-                        context, 
-                        MaterialPageRoute(
-                          builder: (context) => const loginPage()));
-                    },
                   ),
-                ],
-              ),
+                ),
+            ),
+              // child: Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+
+              //   children: [
+              //     InkWell(
+              //       child: const Text(
+              //         'Sorry you need login',
+              //         style: TextStyle(
+              //           color: Color(0xFF4DACB2),
+              //           fontSize: 16,
+              //           fontWeight: FontWeight.bold,
+              //         ),
+              //       ),
+              //       onTap: (){
+              //         Navigator.push(
+              //           context, 
+              //           MaterialPageRoute(
+              //             builder: (context) => const loginPage()));
+              //       },
+              //     ),
+              //   ],
+              // ),
             ),
 
 
