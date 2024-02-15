@@ -12,23 +12,18 @@ class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Center(
+      child: Column(
         children: [
-          SizedBox(height: 60,), 
-          Container(
-            alignment: Alignment.center,
-            width: 300,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.black,
-                width: 2
-              )
+          SizedBox(height: 50),
+          TextFormField(
+            decoration: InputDecoration(
+              hintText: 'Search bible, verses...',
+              border: const OutlineInputBorder()
             ),
-            child: Text(
-              "Valo"
-            ),
-          )
+          ),
         ],
+      ),
       ),
 
 
