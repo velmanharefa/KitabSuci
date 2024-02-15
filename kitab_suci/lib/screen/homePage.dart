@@ -13,16 +13,24 @@ class _homePageState extends State<homePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-      child: Column(
-        children: [
-          SizedBox(height: 50),
-          TextFormField(
-            decoration: InputDecoration(
-              hintText: 'Search bible, verses...',
-              border: const OutlineInputBorder()
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical:  10, horizontal: 20),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(height: 50),
+            
+            TextFormField(
+              decoration: InputDecoration(
+                // https://www.youtube.com/watch?v=yumtaMvUnC8&ab_channel=TheTechBrothers
+                hintText: 'Search bible, verses...',
+                border: const OutlineInputBorder()
+              ),
+              
+              
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       ),
 
