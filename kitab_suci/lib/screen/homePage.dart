@@ -1,4 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:kitab_suci/screen/loginPage.dart';
 
@@ -92,6 +93,7 @@ class _homePageState extends State<homePage> {
               alignment: Alignment.center,
               height: 50,
               decoration: BoxDecoration(
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(20.0),
                 border: Border.all(
                   color: Colors.black,
@@ -103,6 +105,7 @@ class _homePageState extends State<homePage> {
                 decoration: InputDecoration(
                   // https://www.youtube.com/watch?v=yumtaMvUnC8&ab_channel=TheTechBrothers
                   hintText: 'Search bible, verses...',
+                  // fillColor: Colors.black,
                   border: InputBorder.none,
                   // border: const OutlineInputBorder(),
                   contentPadding: EdgeInsets.all(14),
@@ -404,10 +407,14 @@ class BluePainter extends CustomPainter {
     ovalPath.moveTo(0, 0);
 
     //paint a curve from current position to middle of the screen
+    // ovalPath.quadraticBezierTo(
+    //     0, height*0.2, 0,height*0.15);
+    // ovalPath.quadraticBezierTo(
+    //     width, height*0.2, width,height*0.15);
     ovalPath.quadraticBezierTo(
-        0, height*0.2, 0,height*0.15);
+        0, height*0.3, 0,height*0.25);
     ovalPath.quadraticBezierTo(
-        width, height*0.2, width,height*0.15);
+        width, height*0.2, width,height*0.25);    
 
     ovalPath.lineTo(width,0);
 
