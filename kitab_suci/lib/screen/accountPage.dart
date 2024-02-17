@@ -24,8 +24,7 @@ void _notification() {
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 30),
-
+              SizedBox(height: 50),
             Container(
               width: 500,
               alignment: Alignment.center,
@@ -36,8 +35,6 @@ void _notification() {
               //   )
               // ),
               child: Column(
-                // crossAxisAlignment: CrossAxisAlignment.start,
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   
                   InkWell(
@@ -54,10 +51,214 @@ void _notification() {
                 ],
               ),
             ),
+            SizedBox(height: 15),
+            Container(
+              width: 500,
+              child: Text(
+                textAlign: TextAlign.center,
+                'Werky Sihotang',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Color(0xff000000),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            SizedBox(height: 1),
+            Container(
+              width: 500,
+              child: Text(
+                textAlign: TextAlign.center,
+                'werkySihotang@gmail.com',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Color(0xff7D7D7D)
+                ),
+              ),
+            ),
+
+            SizedBox(height: 40),
+            Container(
+              padding: EdgeInsets.fromLTRB(40, 10, 0, 0),
+              // decoration: BoxDecoration(
+              //   border: Border.all(
+              //     color: Colors.black,
+              //     width: 2,
+              //   )
+              // ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                
+                children: [
+                  InkWell(
+                    child: const Text(
+                      'Account',
+                      style: TextStyle(
+                        color: Color(0xFF000000),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    // onTap: (){
+                    //   Navigator.push(
+                    //     context, 
+                    //     MaterialPageRoute(
+                    //       builder: (context) => const loginPage()));
+                    // },
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(50, 15, 0, 0),
+              width: 500,
+              child: Row(
+                children: [
+                  GestureDetector(
+                    onTap: _notification,
+                    child: Container(
+                      width: 40, 
+                      height: 40, 
+                      decoration: BoxDecoration(
+                        color: Color(0xFFffffff),
+                        // color: Colors.grey[200], 
+                      ),
+                      child: Icon(Icons.edit_outlined, color: Colors.black),
+                    ),
+                  ), 
+                  InkWell(
+                    child:Text(
+                      "Edit Profile",
+                      style: TextStyle(
+                        color: Color(0xFF000000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    )
+                  )
+                ]
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(50, 5, 0, 0),
+              width: 500,
+              child: Row(
+                children: [
+                  GestureDetector(
+                    onTap: _notification,
+                    child: Container(
+                      width: 40, 
+                      height: 40, 
+                      decoration: BoxDecoration(
+                        color: Color(0xFFffffff),
+                        // color: Colors.grey[200], 
+                      ),
+                      child: Icon(Icons.favorite_border, color: Colors.black),
+                    ),
+                  ), 
+                  InkWell(
+                    child:Text(
+                      "Favorites",
+                      style: TextStyle(
+                        color: Color(0xFF000000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    )
+                  )
+                ]
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(50, 5, 0, 0),
+              width: 500,
+              child: Row(
+                children: [
+                  GestureDetector(
+                    onTap: _notification,
+                    child: Container(
+                      width: 40, 
+                      height: 40, 
+                      decoration: BoxDecoration(
+                        color: Color(0xFFffffff),
+                        // color: Colors.grey[200], 
+                      ),
+                      child: Icon(Icons.info_outline, color: Colors.black),
+                    ),
+                  ), 
+                  InkWell(
+                    child:Text(
+                      "About Us",
+                      style: TextStyle(
+                        color: Color(0xFF000000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    )
+                  )
+                ]
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(50, 5, 0, 0),
+              width: 500,
+              child: Row(
+                children: [
+                  GestureDetector(
+                    onTap: _notification,
+                    child: Container(
+                      width: 40, 
+                      height: 40, 
+                      decoration: BoxDecoration(
+                        color: Color(0xFFffffff),
+                        // color: Colors.grey[200], 
+                      ),
+                      child: Icon(Icons.logout_rounded, color: Color(0xFFF44336)),
+                    ),
+                  ), 
+                  InkWell(
+                    child:Text(
+                      "Logout",
+                      style: TextStyle(
+                        color: Color(0xFFF44336),
+                        fontSize: 16,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    )
+                  )
+                ]
+              ),
+            ),
             ],
             )
           )
         ),
+        bottomNavigationBar: CurvedNavigationBar(
+        height: 55,
+        backgroundColor: Colors.white,
+        color: Color(0xFF4DACB2),
+        animationDuration: Duration(milliseconds: 300),
+        // onTap: (index){
+        //   print(index);
+        // },
+        items: [
+        Icon(
+          Icons.home,
+          color: Colors.white,
+        ),
+        Icon(
+          Icons.book_outlined, 
+          color: Colors.white,
+        ),
+        Icon(
+          Icons.signal_cellular_alt_outlined, 
+          color: Colors.white,
+        ),
+        Icon(
+          Icons.person, 
+          color: Colors.white,
+        ),
+      ]),
     );
   }
 }
@@ -80,9 +281,9 @@ class BluePainter extends CustomPainter {
 
     //paint a curve from current position to middle of the screen
     ovalPath.quadraticBezierTo(
-        0, height*0.2, 0,height*0.15);
+        0, height*0.3, 0,height*0.25);
     ovalPath.quadraticBezierTo(
-        width, height*0.2, width,height*0.15);
+        width, height*0.2, width,height*0.25);
 
     ovalPath.lineTo(width,0);
 
