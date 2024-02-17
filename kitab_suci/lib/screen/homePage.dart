@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:kitab_suci/screen/loginPage.dart';
+import 'package:kitab_suci/screen/editProfil.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -301,7 +302,7 @@ class _homePageState extends State<homePage> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => loginPage()),
+                    MaterialPageRoute(builder: (context) => editProfil()),
                   );
                 },
                 child: Container(
