@@ -28,6 +28,7 @@ class _introPage2State extends State<introPage2> {
             height: 60,
           ),
           Container(
+            width: 360,
             // decoration: BoxDecoration(
             //   border: Border.all(
             //     color: Colors.black, // Warna outline
@@ -35,7 +36,7 @@ class _introPage2State extends State<introPage2> {
             //   ),
             // ),
             alignment: Alignment.centerRight,
-            margin: EdgeInsets.only(right: 20, left: 20),
+            // margin: EdgeInsets.only(right: 20, left: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -69,7 +70,7 @@ class _introPage2State extends State<introPage2> {
               ),
             ),
             SizedBox(
-              height: 60,
+              height: 50,
             ),
 
             Container(
@@ -80,7 +81,7 @@ class _introPage2State extends State<introPage2> {
             ),
 
             SizedBox(
-              height: 10,
+              height: 11,
             ),
 
           Container(
@@ -98,12 +99,12 @@ class _introPage2State extends State<introPage2> {
                   color: Color(0xFF4DACB2),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 19),
               Text(
                 'Kami menyediakan kitab yang dapat di akses dimanapun kalian berada',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   color: Color(0xFFABABAB),
                 ),
               ),
@@ -112,34 +113,28 @@ class _introPage2State extends State<introPage2> {
           ),
 
           SizedBox(
-              height: 10,
+              height: 12,
             ),
 
           Container(
-            child: ElevatedButton(
-              onPressed: _next,
-              style: ElevatedButton.styleFrom(
-                foregroundColor: const Color.fromARGB(255, 0, 0, 0),
-                backgroundColor: Color(0xFF4DACB2),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+            margin: const EdgeInsets.only(top: 10),
+                alignment: Alignment.center,
+                child: ElevatedButton(
+                  onPressed: _next,
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    backgroundColor: const Color(0xff4DACB2), // Ubah warna teks
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    minimumSize: const Size(217, 51),
+                  ),
+                  child: const Text(
+                    'Next',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
                 ),
-                minimumSize: const Size(217, 52),
-                ),
-              child: const Text(
-                'Next',
-                style: TextStyle(
-                  color: Color(0xFFffffff) 
-                ),
-              ),
-              ),
-            ),
-              
-                
-            
-            
-
-
+          ),
         ] 
     )
     );

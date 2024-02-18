@@ -35,6 +35,7 @@ class _introPage3State extends State<introPage3> {
           ),
       
           Container(
+            width: 360,
             // decoration: BoxDecoration(
             //   border: Border.all(
             //     color: Colors.black, // Warna outline
@@ -42,7 +43,7 @@ class _introPage3State extends State<introPage3> {
             //   ),
             // ),
             alignment: Alignment.centerRight,
-            margin: EdgeInsets.only(right: 20, left: 20),
+            // margin: EdgeInsets.only(right: 20, left: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -77,7 +78,7 @@ class _introPage3State extends State<introPage3> {
             ),
 
           SizedBox(
-            height: 10,
+            height: 30,
           ),
 
           Container(
@@ -92,17 +93,18 @@ class _introPage3State extends State<introPage3> {
                   "assets/images/intro3.png",
                 ),
 
-                // SizedBox(height: 10,),
+                SizedBox(height: 8,),
 
                 Text(
                   "Selamat Membaca",
                   style: TextStyle(
-                    fontSize: 28,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
                     color: Color(0xFF4DACB2),                
                   ),
                 ),
 
-                SizedBox(height: 2),
+                SizedBox(height: 15),
                 Text(
                   "“Lebih baik kehilangan sesuatu demi Tuhan. Daripada kehilangan Tuhan demi sesuatu”",
                   textAlign: TextAlign.center,
@@ -112,7 +114,7 @@ class _introPage3State extends State<introPage3> {
                   ),
                 ),
 
-                SizedBox(height: 25),
+                SizedBox(height: 15),
                 Text(
                   "Mufti Menk",
                   textAlign: TextAlign.center,
@@ -145,24 +147,27 @@ class _introPage3State extends State<introPage3> {
                 ),
           ),
 
+          SizedBox(height: 3),
+
           Container(
             // alignment: Alignment.center,
             width: 150,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Color(0xFFABABAB),
-                width: 2,
-              )
-            ),
+            // decoration: BoxDecoration(
+            //   border: Border.all(
+            //     color: Color(0xFFABABAB),
+            //     width: 2,
+            //   )
+            // ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 InkWell(
                   child: const Text(
                     'Login',
-                    // style: TextStyle(
-                    //     fontWeight: FontWeight.w600,
-                    //     letterSpacing: 0.5),
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Color(0xFFABABAB),
+                    ),
                   ),
                   onTap: () {
                     Navigator.push(
@@ -173,13 +178,17 @@ class _introPage3State extends State<introPage3> {
                 ),
                 Text(
                   "|",
+                  style: TextStyle(
+                  color: Color(0xFFABABAB),
+                  ),
                 ),
                 InkWell(
                   child: const Text(
                     'Sign-Up',
-                    // style: TextStyle(
-                    //     fontWeight: FontWeight.w600,
-                    //     letterSpacing: 0.5),
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Color(0xFFABABAB),
+                    ),
                   ),
                   onTap: () {
                     Navigator.push(

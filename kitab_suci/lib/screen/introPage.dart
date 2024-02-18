@@ -23,34 +23,53 @@ class _introPageState extends State<introPage> {
           SizedBox(
             height: 60,
           ),
-      
+
+
+
           Container(
-            width: 360,
-            alignment: Alignment.center,
+            width: 336,
+            // decoration: BoxDecoration(
+            //   border: Border.all(
+            //     color: Colors.black, // Warna outline
+            //     width: 2, // Ketebalan outline
+            //   ),
+            // ),
+            alignment: Alignment.centerRight,
+            // padding:EdgeInsets.all(15),
+            // margin: EdgeInsets.only(right: 20, left: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                InkWell(
-                  child: const Text(
-                    'Skip',
-                    style: TextStyle(
-                      color: Color(0xFF4DACB2),
-                      fontSize: 20, 
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Inter',
-                    ),    
+                Icon(
+                  Icons.circle,
+                  color: Colors.transparent,
+                  size: 45,
                   ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const homePage())
-                    );
-                  },
-                )
+                  SizedBox(
+                    width: 230,
+                  ),
+                InkWell(
+                  child: Text(
+                  'Skip',
+                  style: TextStyle(
+                    color: Color(0xFF4DACB2),
+                    fontSize: 20, 
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Inter',
+                    
+                    ),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const homePage()));
+                } ,
+                ),
+                
               ],
+              ),
             ),
-          ),
 
           SizedBox(
             height: 100,
@@ -58,8 +77,8 @@ class _introPageState extends State<introPage> {
 
           Container(
             alignment: Alignment.center,
-            // width: 380,
-            // height: 250,
+            width: 380,
+            // height: 130,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -67,17 +86,18 @@ class _introPageState extends State<introPage> {
                   "assets/images/gambarIntro.png",
                 ),
 
-                SizedBox(height: 10,),
+                SizedBox(height: 40,),
 
                 Text(
                   "Complete Scripture",
                   style: TextStyle(
-                    fontSize: 28,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
                     color: Color(0xFF4DACB2),                
                   ),
                 ),
 
-                SizedBox(height: 2),
+                SizedBox(height: 20),
                 Text(
                   "We provide all the holy books in Indonesia, where all religious congregations in Indonesia can search for holy books according to their needs",
                   textAlign: TextAlign.center,
@@ -89,6 +109,8 @@ class _introPageState extends State<introPage> {
               ],
             ),
           ),
+          
+          SizedBox(height: 10),
 
           Container(
             margin: const EdgeInsets.only(top: 10),
