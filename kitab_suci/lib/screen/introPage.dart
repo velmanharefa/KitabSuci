@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kitab_suci/screen/homePage.dart';
 import 'package:kitab_suci/screen/intropage2.dart';
 
 class introPage extends StatefulWidget {
@@ -24,16 +25,30 @@ class _introPageState extends State<introPage> {
           ),
       
           Container(
-            alignment: Alignment.topRight,
-            margin: EdgeInsets.only(right: 16),
-            child: Text(
-              "Skip",
-              style: TextStyle(
-                color: Color(0xFF4DACB2),
-                fontSize: 20, 
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Inter',
-              ),
+            width: 360,
+            alignment: Alignment.center,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                InkWell(
+                  child: const Text(
+                    'Skip',
+                    style: TextStyle(
+                      color: Color(0xFF4DACB2),
+                      fontSize: 20, 
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Inter',
+                    ),    
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const homePage())
+                    );
+                  },
+                )
+              ],
             ),
           ),
 

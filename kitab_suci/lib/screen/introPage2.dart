@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kitab_suci/screen/homePage.dart';
 import 'package:kitab_suci/screen/introPage.dart';
 import 'package:kitab_suci/screen/introPage3.dart';
 
@@ -60,7 +61,7 @@ class _introPage2State extends State<introPage2> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const introPage2()));
+                        builder: (context) => const homePage()));
                 } ,
                 ),
                 

@@ -35,7 +35,7 @@ class _singUpPageState extends State<singUpPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: GestureDetector(
-        onTap: ()=>_resetPosition(),
+        onTap: ()=> _resetPosition(),
         child: SingleChildScrollView(
           controller: _scrollController,
           child: Column(
