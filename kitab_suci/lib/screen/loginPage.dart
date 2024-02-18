@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kitab_suci/screen/forgotPassword.dart';
 import 'package:kitab_suci/screen/intropage2.dart';
 import 'package:kitab_suci/screen/intropage3.dart';
 
@@ -202,7 +203,7 @@ class _loginPageState extends State<loginPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const loginPage()));
+                                  builder: (context) => const forgotPassword()));
                         },
                       ),
                     ),
