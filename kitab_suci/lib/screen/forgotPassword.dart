@@ -95,53 +95,54 @@ class _forgotPasswordState extends State<forgotPassword> {
                       ),
                     ),
           
-                    SizedBox(height: 30),
+                    SizedBox(height: 5),
           
                   Container(
                     alignment: Alignment.center,
                     child: Image.asset(
-                      'assets/images/register.png',
+                      'assets/images/forgotpass.png',
+                      // width: 192,
+                      // height: 192,
                     ),
                   ),
           
                   // Inputan Register
                     TextField(
                       decoration: InputDecoration(
-                        hintText: "enter your name",
-                        labelText: "Full Name",
-                        labelStyle: TextStyle(
-                          fontSize: 16,
-                          color: Color(0xFF4DACB2),
-                        )
-                      ),
-                      keyboardType: TextInputType.name,
-                    ),
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: "what do we call you?",
-                        labelText: "Nickname",
-                        labelStyle: TextStyle(
-                          fontSize: 16,
-                          color: Color(0xFF4DACB2),
-                        )
-                      ),
-                      keyboardType: TextInputType.name,
-                    ),
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: "example@email.com",
+                        hintText: "enter your email",
                         labelText: "Email",
                         labelStyle: TextStyle(
                           fontSize: 16,
                           color: Color(0xFF4DACB2),
                         )
                       ),
-                      keyboardType: TextInputType.emailAddress,
+                      keyboardType: TextInputType.name,
+                    ),
+                    
+                    TextField(
+                      decoration: InputDecoration(
+                        hintText: "enter your new password",
+                        labelText: "New Password",
+                        labelStyle: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFF4DACB2),
+                        ),
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _secureText? Icons.remove_red_eye : Icons.visibility_off),
+                          onPressed: (){
+                            setState(() {
+                              _secureText = !_secureText;
+                            });
+                          },
+                          )),
+                      keyboardType: TextInputType.visiblePassword,
+                      obscureText:  _secureText,
                     ),
                     TextField(
                       decoration: InputDecoration(
-                        hintText: "enter password",
-                        labelText: "Password",
+                        hintText: "confirm your new password",
+                        labelText: "Confirm Password",
                         labelStyle: TextStyle(
                           fontSize: 16,
                           color: Color(0xFF4DACB2),
@@ -183,7 +184,7 @@ class _forgotPasswordState extends State<forgotPassword> {
                         minimumSize: const Size(217, 51),
                       ),
                       child: const Text(
-                        'Submit',
+                        'Enter',
                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                     ),
