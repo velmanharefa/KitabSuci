@@ -134,7 +134,13 @@ void _notification() {
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
                       ),
-                    )
+                    ),
+                    onTap: (){
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => const loginPage()));
+                    },
                   )
                 ]
               ),
@@ -164,7 +170,13 @@ void _notification() {
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
                       ),
-                    )
+                    ),
+                    onTap: (){
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => const loginPage()));
+                    },
                   )
                 ]
               ),
@@ -194,7 +206,13 @@ void _notification() {
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
                       ),
-                    )
+                    ),
+                    onTap: (){
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => const loginPage()));
+                    },
                   )
                 ]
               ),
@@ -224,7 +242,13 @@ void _notification() {
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
                       ),
-                    )
+                    ),
+                    onTap: (){
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => const loginPage()));
+                    },
                   )
                 ]
               ),
