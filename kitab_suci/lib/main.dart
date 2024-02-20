@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kitab_suci/screen/accountPage.dart';
+import 'package:kitab_suci/screen/accountSetting.dart';
 import 'package:kitab_suci/screen/editProfil.dart';
 import 'package:kitab_suci/screen/introPage.dart';
 import 'package:kitab_suci/screen/introPage2.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),useMaterial3: true,),
-      home: SplashScreenPage(),
+      home: accountSetting(),
     );
   }
 }
