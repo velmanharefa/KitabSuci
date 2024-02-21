@@ -148,6 +148,133 @@ class _accountSettingState extends State<accountSetting> {
               ),
             ),
             
+            SizedBox(height: 15),
+
+            Container(
+              width: 300,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.edit,
+                    color: Colors.black,
+                  ),
+
+                  SizedBox(width: 10),
+
+                  InkWell(
+                    child: const Text(
+                      'Edit Profil',
+                      style: TextStyle(
+                        color: Color(0xFF000000),
+                        fontSize: 16,
+                      ),
+                    ),
+                    // onTap: (){
+                    //   Navigator.push(
+                    //     context, 
+                    //     MaterialPageRoute(
+                    //       builder: (context) => const loginPage()));
+                    // },
+                  ),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15),
+
+            Container(
+              width: 300,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.favorite_border,
+                    color: Colors.black,
+                  ),
+
+                  SizedBox(width: 10),
+
+                  InkWell(
+                    child: const Text(
+                      'Favorit',
+                      style: TextStyle(
+                        color: Color(0xFF000000),
+                        fontSize: 16,
+                      ),
+                    ),
+                    // onTap: (){
+                    //   Navigator.push(
+                    //     context, 
+                    //     MaterialPageRoute(
+                    //       builder: (context) => const loginPage()));
+                    // },
+                  ),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15),
+
+            Container(
+              width: 300,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.info_outline,
+                    color: Colors.black,
+                  ),
+
+                  SizedBox(width: 10),
+
+                  InkWell(
+                    child: const Text(
+                      'About Us',
+                      style: TextStyle(
+                        color: Color(0xFF000000),
+                        fontSize: 16,
+                      ),
+                    ),
+                    // onTap: (){
+                    //   Navigator.push(
+                    //     context, 
+                    //     MaterialPageRoute(
+                    //       builder: (context) => const loginPage()));
+                    // },
+                  ),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15),
+
+            Container(
+              width: 300,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.logout_rounded,
+                    color: Color(0xffFF151A),
+                  ),
+
+                  SizedBox(width: 10),
+
+                  InkWell(
+                    child: const Text(
+                      'Logout',
+                      style: TextStyle(
+                        color: Color(0xffFF151A),
+                        fontSize: 16,
+                      ),
+                    ),
+                    // onTap: (){
+                    //   Navigator.push(
+                    //     context, 
+                    //     MaterialPageRoute(
+                    //       builder: (context) => const loginPage()));
+                    // },
+                  ),
+                ],
+              ),
+            )
             
 
 
