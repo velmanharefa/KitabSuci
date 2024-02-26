@@ -62,7 +62,7 @@ class _introPage2State extends State<introPage2> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const homePage()));
+                        builder: (context) => const homepage()));
                 } ,
                 ),
                 

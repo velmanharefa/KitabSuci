@@ -16,7 +16,7 @@ class _singUpPageState extends State<singUpPage> {
   }
   void _submit() {
     Navigator.push(
-      context, MaterialPageRoute(builder: (context) => const homePage()));
+      context, MaterialPageRoute(builder: (context) => const homepage()));
   }
   bool _secureText = true;
   ScrollController _scrollController = ScrollController();

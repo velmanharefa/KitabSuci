@@ -17,7 +17,7 @@ class _editProfilState extends State<editProfil> {
 
   void _ubahAcount() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const homePage()));
+        context, MaterialPageRoute(builder: (context) => const homepage()));
   }
   
 

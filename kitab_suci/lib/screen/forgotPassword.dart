@@ -16,7 +16,7 @@ class _forgotPasswordState extends State<forgotPassword> {
   }
   void _submit() {
     Navigator.push(
-      context, MaterialPageRoute(builder: (context) => const homePage()));
+      context, MaterialPageRoute(builder: (context) => const homepage()));
   }
   bool _secureText = true;
   ScrollController _scrollController = ScrollController();
