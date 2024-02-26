@@ -5,6 +5,7 @@ import 'package:kitab_suci/screen/editProfil.dart';
 import 'package:kitab_suci/screen/introPage.dart';
 import 'package:kitab_suci/screen/introPage2.dart';
 import 'package:kitab_suci/screen/loginPage.dart';
+import 'package:kitab_suci/screen/navbar.dart';
 import 'package:kitab_suci/screen/splashscreen.dart';
 import 'package:kitab_suci/screen/homePage.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),useMaterial3: true,),
-      home: accountPage(),
+      home: NavBar(),
     );
   }
 }
