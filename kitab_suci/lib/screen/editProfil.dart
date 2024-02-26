@@ -20,6 +20,7 @@ class _editProfilState extends State<editProfil> {
         context, MaterialPageRoute(builder: (context) => const homepage()));
   }
   
+  // int _currentIndex = 3;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,8 @@ class _editProfilState extends State<editProfil> {
         child: Column(
 
         children: [
-          SizedBox(height: 220),
+          CustomPaint(size: Size(5000, 100),painter:BluePainter(),),
+          // SizedBox(height: 220),
 
           Container(
             child: Column(
@@ -166,8 +168,11 @@ class _editProfilState extends State<editProfil> {
         backgroundColor: Colors.white,
         color: Color(0xFF4DACB2),
         animationDuration: Duration(milliseconds: 300),
+        // index: _currentIndex,
         // onTap: (index){
-        //   print(index);
+        //   setState(() {
+        //     _currentIndex = index;
+        //   });
         // },
         items: [
         Icon(
@@ -204,14 +209,12 @@ class BluePainter extends CustomPainter {
     canvas.drawPath(mainBackground, paint);
 
   Path ovalPath = Path();
-    //Start paint from 20% height to the left
     ovalPath.moveTo(0, 0);
 
-    //paint a curve from current position to middle of the screen
     ovalPath.quadraticBezierTo(
-        0, height*0.2, 0,height*0.15);
+        0, height*0.3, 0,height*0.25);
     ovalPath.quadraticBezierTo(
-        width, height*0.2, width,height*0.15);
+        width, height*0.2, width,height*0.25);
 
     ovalPath.lineTo(width,0);
 

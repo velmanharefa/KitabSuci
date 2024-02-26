@@ -573,12 +573,12 @@ class _homepageState extends State<homepage> {
                               fontSize: 16,
                             ),
                           ),
-                          // onTap: (){
-                          //   Navigator.push(
-                          //     context, 
-                          //     MaterialPageRoute(
-                          //       builder: (context) => const loginPage()));
-                          // },
+                          onTap: (){
+                            Navigator.push(
+                              context, 
+                              MaterialPageRoute(
+                                builder: (context) => const editProfil()));
+                          },
                         ),
                       ],
                     ),

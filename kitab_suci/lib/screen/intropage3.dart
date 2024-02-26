@@ -16,7 +16,7 @@ class introPage3 extends StatefulWidget {
 class _introPage3State extends State<introPage3> {
   void _start() {
     Navigator.push(
-      context, MaterialPageRoute(builder: (context) => const introPage2()));
+      context, MaterialPageRoute(builder: (context) => const homepage()));
   }
 
 
