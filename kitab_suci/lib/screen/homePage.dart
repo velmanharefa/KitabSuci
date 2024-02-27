@@ -300,20 +300,321 @@ class _homepageState extends State<homepage> {
                   ],
                 ),
               ),
-            
-              Container(
-                
-                height: 50,
-                width: 100,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.0),
-                  border : Border.all(
-                    color: Colors.black,
-                    width: 1,
-                  )
+
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => editProfil()),
+                        );
+                      },
+                      child: Container(
+                        height: 45,
+                        width: 85,
+                        margin: EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 35,
+                              width: 35,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xFF4DACB2),
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  Icons.menu_book_rounded,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 5),
+                            Text(
+                              'All',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xFF000000),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 10),
+
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => editProfil()),
+                        );
+                      },
+                      child: Container(
+                        height: 45,
+                        width: 115,
+                        margin: EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 35,
+                              width: 35,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xFF4DACB2),
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  Icons.menu_book_rounded,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 5),
+                            Text(
+                              'Alkitab',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xFF000000),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 10),
+
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => editProfil()),
+                        );
+                      },
+                      child: Container(
+                        height: 45,
+                        width: 125,
+                        margin: EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 35,
+                              width: 35,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xFF4DACB2),
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  Icons.menu_book_rounded,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 5),
+                            Text(
+                              'Al-Quran',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xFF000000),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 10),
+
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => editProfil()),
+                        );
+                      },
+                      child: Container(
+                        height: 45,
+                        width: 105,
+                        margin: EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 35,
+                              width: 35,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xFF4DACB2),
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  Icons.menu_book_rounded,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 5),
+                            Text(
+                              'Weda',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xFF000000),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 10),
+
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => editProfil()),
+                        );
+                      },
+                      child: Container(
+                        height: 45,
+                        width: 125,
+                        margin: EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 35,
+                              width: 35,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xFF4DACB2),
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  Icons.menu_book_rounded,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 5),
+                            Text(
+                              'Tripitaka',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xFF000000),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 10),
+
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => editProfil()),
+                        );
+                      },
+                      child: Container(
+                        height: 45,
+                        width: 165,
+                        margin: EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 35,
+                              width: 35,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xFF4DACB2),
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  Icons.menu_book_rounded,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 5),
+                            Text(
+                              'Shishu Wujing',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xFF000000),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    
+
+                  ],
                 ),
               ),
-            
+
+
+
+
+    
+
               SizedBox(height: 5),
             
               Container(
@@ -348,6 +649,7 @@ class _homepageState extends State<homepage> {
                 ),
               ),
             
+              
             
               SizedBox(height: 5),
             
@@ -379,35 +681,13 @@ class _homepageState extends State<homepage> {
                       ),
                     ),
                   ),
+                ),
               ),
-                // child: Row(
-                //   mainAxisAlignment: MainAxisAlignment.center,
-            
-                //   children: [
-                //     InkWell(
-                //       child: const Text(
-                //         'Sorry you need login',
-                //         style: TextStyle(
-                //           color: Color(0xFF4DACB2),
-                //           fontSize: 16,
-                //           fontWeight: FontWeight.bold,
-                //         ),
-                //       ),
-                //       onTap: (){
-                //         Navigator.push(
-                //           context, 
-                //           MaterialPageRoute(
-                //             builder: (context) => const loginPage()));
-                //       },
-                //     ),
-                //   ],
-                // ),
-                  ),
-                ],
-              ),
+              ],
             ),
           ),
-        );
+        ),
+      );
       case 1:
         return Center(
           child: Column(
@@ -515,9 +795,6 @@ class _homepageState extends State<homepage> {
                       ],
                     ),
                   ),
-                  
-                  
-
                   SizedBox(height: 55),
 
                   Container(
