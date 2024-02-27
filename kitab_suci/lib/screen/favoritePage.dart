@@ -79,180 +79,36 @@ class _favoritePageState extends State<favoritePage> {
 
             SizedBox(height: 40),
             Container(
-              padding: EdgeInsets.fromLTRB(40, 10, 0, 0),
-              // decoration: BoxDecoration(
-              //   border: Border.all(
-              //     color: Colors.black,
-              //     width: 2,
-              //   )
-              // ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                
-                children: [
-                  InkWell(
-                    child: const Text(
-                      'Account',
-                      style: TextStyle(
-                        color: Color(0xFF000000),
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  // onTap: () {
+                  //   Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(builder: (context) => loginPage()),
+                  //   );
+                  // },
+                  child: Container(
+                    height: 150,
+                    width: 300,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 1,
                       ),
                     ),
-                    // onTap: (){
-                    //   Navigator.push(
-                    //     context, 
-                    //     MaterialPageRoute(
-                    //       builder: (context) => const loginPage()));
-                    // },
+                    child: Center(
+                      child: Text(
+                        'Sorry you need login',
+                        style: TextStyle(
+                          color: Color(0xFF4DACB2),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ),
-                ],
+                ),
               ),
-            ),
-            Container(
-              padding: EdgeInsets.fromLTRB(50, 15, 0, 0),
-              width: 500,
-              child: Row(
-                children: [
-                  GestureDetector(
-                    onTap: _notification,
-                    child: Container(
-                      width: 40, 
-                      height: 40, 
-                      decoration: BoxDecoration(
-                        color: Color(0xFFffffff),
-                        // color: Colors.grey[200], 
-                      ),
-                      child: Icon(Icons.edit_outlined, color: Colors.black),
-                    ),
-                  ), 
-                  InkWell(
-                    child:Text(
-                      "Edit Profile",
-                      style: TextStyle(
-                        color: Color(0xFF000000),
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                    onTap: (){
-                      Navigator.push(
-                        context, 
-                        MaterialPageRoute(
-                          builder: (context) => const loginPage()));
-                    },
-                  )
-                ]
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.fromLTRB(50, 5, 0, 0),
-              width: 500,
-              child: Row(
-                children: [
-                  GestureDetector(
-                    onTap: _notification,
-                    child: Container(
-                      width: 40, 
-                      height: 40, 
-                      decoration: BoxDecoration(
-                        color: Color(0xFFffffff),
-                        // color: Colors.grey[200], 
-                      ),
-                      child: Icon(Icons.favorite_border, color: Colors.black),
-                    ),
-                  ), 
-                  InkWell(
-                    child:Text(
-                      "Favorites",
-                      style: TextStyle(
-                        color: Color(0xFF000000),
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                    onTap: (){
-                      Navigator.push(
-                        context, 
-                        MaterialPageRoute(
-                          builder: (context) => const loginPage()));
-                    },
-                  )
-                ]
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.fromLTRB(50, 5, 0, 0),
-              width: 500,
-              child: Row(
-                children: [
-                  GestureDetector(
-                    onTap: _notification,
-                    child: Container(
-                      width: 40, 
-                      height: 40, 
-                      decoration: BoxDecoration(
-                        color: Color(0xFFffffff),
-                        // color: Colors.grey[200], 
-                      ),
-                      child: Icon(Icons.info_outline, color: Colors.black),
-                    ),
-                  ), 
-                  InkWell(
-                    child:Text(
-                      "About Us",
-                      style: TextStyle(
-                        color: Color(0xFF000000),
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                    onTap: (){
-                      Navigator.push(
-                        context, 
-                        MaterialPageRoute(
-                          builder: (context) => const loginPage()));
-                    },
-                  )
-                ]
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.fromLTRB(50, 5, 0, 0),
-              width: 500,
-              child: Row(
-                children: [
-                  GestureDetector(
-                    onTap: _notification,
-                    child: Container(
-                      width: 40, 
-                      height: 40, 
-                      decoration: BoxDecoration(
-                        color: Color(0xFFffffff),
-                        // color: Colors.grey[200], 
-                      ),
-                      child: Icon(Icons.logout_rounded, color: Color(0xFFF44336)),
-                    ),
-                  ), 
-                  InkWell(
-                    child:Text(
-                      "Logout",
-                      style: TextStyle(
-                        color: Color(0xFFF44336),
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                    onTap: (){
-                      Navigator.push(
-                        context, 
-                        MaterialPageRoute(
-                          builder: (context) => const loginPage()));
-                    },
-                  )
-                ]
-              ),
-            ),
             ],
           ),
         )
