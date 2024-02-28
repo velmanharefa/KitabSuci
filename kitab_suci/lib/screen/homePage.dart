@@ -1239,17 +1239,20 @@ class _homepageState extends State<homepage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          SizedBox(width: 50),
                           Image.asset(
                             'assets/images/alkitab.png',
                           ),
-                          SizedBox(width: 8),
+                          SizedBox(width: 20),
                           Expanded(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
+
                                     Text(
                                       'Bible',
                                       style: TextStyle(
@@ -1259,19 +1262,15 @@ class _homepageState extends State<homepage> {
                                       ),
                                     ),
 
-                                    SizedBox(width: 4),
-
-                                    IconButton(
-                                      onPressed: () {
-                                        // Tambahkan logika untuk menangani penutupan di sini
-                                      },
-                                      icon: Icon(Icons.close),
-
-                                      color: Color(0xff8A8A8A),
-                                    ),
+                                    // IconButton(
+                                    //   onPressed: () {
+                                    //     // Tambahkan logika untuk menangani penutupan di sini
+                                    //   },
+                                    //   icon: Icon(Icons.close),
+                                    //   color: Color(0xff8A8A8A),
+                                    // ),
                                   ],
                                 ),
-
                                 Text(
                                   'Yohanes 18',
                                   style: TextStyle(
