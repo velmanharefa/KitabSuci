@@ -21,95 +21,254 @@ class _favoritePageState extends State<favoritePage> {
     return Scaffold(
       body: CustomPaint(
         painter:BluePainter(),
-        child: Center(
-          child: Column(
-            children:<Widget> [
-              SizedBox(height: 50),
-            Container(
-              width: 500,
-              alignment: Alignment.center,
-              // decoration: BoxDecoration(
-              //   border: Border.all(
-              //     color: Colors.black,
-              //     width: 2,
-              //   )
-              // ),
+        child: Container(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical:  10, horizontal: 20),
+            child: Center(
               child: Column(
-                children: [
-                  
-                  InkWell(
-                    child: Text(
-                      textAlign: TextAlign.center,
-                      'Favorite',
+                children:<Widget> [
+                  SizedBox(height: 50),
+                Container(
+                  width: 500,
+                  alignment: Alignment.center,
+                  // decoration: BoxDecoration(
+                  //   border: Border.all(
+                  //     color: Colors.black,
+                  //     width: 2,
+                  //   )
+                  // ),
+                  child: Column(
+                    children: [
+                      
+                      InkWell(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          'Favorite',
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Color(0xff000000),
+                          fontWeight: FontWeight.w900,
+                        ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15),
+                Container(
+                  width: 500,
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'Werky Sihotang',
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       color: Color(0xff000000),
-                      fontWeight: FontWeight.bold,
-                    ),
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
-                ],
-              ),
-            ),
-            SizedBox(height: 15),
-            Container(
-              width: 500,
-              child: Text(
-                textAlign: TextAlign.center,
-                'Werky Sihotang',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Color(0xff000000),
-                  fontWeight: FontWeight.w500,
                 ),
-              ),
-            ),
-            SizedBox(height: 1),
-            Container(
-              width: 500,
-              child: Text(
-                textAlign: TextAlign.center,
-                'werkySihotang@gmail.com',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Color(0xff7D7D7D)
+                SizedBox(height: 1),
+                Container(
+                  width: 500,
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'werkySihotang@gmail.com',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Color(0xff7D7D7D)
+                    ),
+                  ),
                 ),
-              ),
-            ),
-
-            SizedBox(height: 40),
-            Container(
-                child: InkWell(
-                  // onTap: () {
-                  //   Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(builder: (context) => loginPage()),
-                  //   );
-                  // },
-                  child: Container(
-                    height: 150,
-                    width: 300,
+            
+                SizedBox(height: 20),
+                Container(
+                    alignment: Alignment.center,
+                    height: 50,
                     decoration: BoxDecoration(
+                      color: Colors.white,
                       borderRadius: BorderRadius.circular(20.0),
                       border: Border.all(
                         color: Colors.black,
                         width: 1,
                       ),
                     ),
-                    child: Center(
-                      child: Text(
-                        'Sorry you need login',
-                        style: TextStyle(
-                          color: Color(0xFF4DACB2),
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
+                    child: TextFormField(
+                      
+                      decoration: InputDecoration(
+                        // https://www.youtube.com/watch?v=yumtaMvUnC8&ab_channel=TheTechBrothers
+                        hintText: 'Search bible, verses...',
+                        // fillColor: Colors.black,
+                        border: InputBorder.none,
+                        // border: const OutlineInputBorder(),
+                        contentPadding: EdgeInsets.all(14),
+                        prefixIcon: Icon(Icons.search),
                       ),
                     ),
                   ),
-                ),
+                  SizedBox(height: 30),
+
+                  // favorite container
+                  Container(
+                    child: InkWell(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Alkitab',
+                                  style: TextStyle(
+                                    color: Color(0xFF000000),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                              ),
+                              Icon(Icons.favorite, color: Color(0xFFFF0000), size: 30,),
+                            ]
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: InkWell(
+                      // onTap: () {
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(builder: (context) => loginPage()),
+                      //   );
+                      // },
+                      child: Container(
+                        alignment: Alignment.topLeft,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Text(
+                              //   'Alkitab',
+                              //     style: TextStyle(
+                              //       color: Color(0xFF000000),
+                              //       fontSize: 20,
+                              //       fontWeight: FontWeight.w600,
+                              //     ),
+                              // ),
+                              // Icon(Icons.more_horiz, color: Colors.black, size: 15,),
+                              Text(
+                                'Lukas 1 : 2',
+                                  style: TextStyle(
+                                    color: Color(0xFF8A8A8A),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                              ),
+                              Text(
+                                'Aku berkata kepadamu : Demikian juga akan ada sukacita di sorga karena satu ',
+                                  style: TextStyle(
+                                    color: Color(0xFF8A8A8A),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                              ),
+                              GestureDetector(
+                                onTap: _notification,
+                                child: Container(
+                                  width: 15, 
+                                  height: 15, 
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Color(0xFFD9D9D9),
+                                    // color: Colors.grey[200], 
+                                  ),
+                                  child: Icon(Icons.more_horiz, color: Colors.black, size: 15,),
+                                ),
+                              ),  
+                            ],
+                          ),
+                          
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
+
+                  // favorite container
+                  Container(
+                    child: InkWell(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Alkitab',
+                                  style: TextStyle(
+                                    color: Color(0xFF000000),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                              ),
+                              Icon(Icons.favorite, color: Color(0xFFFF0000), size: 30,),
+                            ]
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: InkWell(
+                      // onTap: () {
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(builder: (context) => loginPage()),
+                      //   );
+                      // },
+                      child: Container(
+                        alignment: Alignment.topLeft,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Text(
+                              //   'Alkitab',
+                              //     style: TextStyle(
+                              //       color: Color(0xFF000000),
+                              //       fontSize: 20,
+                              //       fontWeight: FontWeight.w600,
+                              //     ),
+                              // ),
+                              // Icon(Icons.more_horiz, color: Colors.black, size: 15,),
+                              Text(
+                                'Lukas 1 : 2',
+                                  style: TextStyle(
+                                    color: Color(0xFF8A8A8A),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                              ),
+                              Text(
+                                'Aku berkata kepadamu : Demikian juga akan ada sukacita di sorga karena satu ',
+                                  style: TextStyle(
+                                    color: Color(0xFF8A8A8A),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                              ),
+                              GestureDetector(
+                                onTap: _notification,
+                                child: Container(
+                                  width: 15, 
+                                  height: 15, 
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Color(0xFFD9D9D9),
+                                    // color: Colors.grey[200], 
+                                  ),
+                                  child: Icon(Icons.more_horiz, color: Colors.black, size: 15,),
+                                ),
+                              ),  
+                            ],
+                          ),
+                          
+                      ),
+                    ),
+                  ),
+                SizedBox(height: 10),
+                ],
               ),
-            ],
+            ),
           ),
         )
       ),
