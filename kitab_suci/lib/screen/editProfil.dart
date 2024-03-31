@@ -163,35 +163,35 @@ class _editProfilState extends State<editProfil> {
       
 
 
-      bottomNavigationBar: CurvedNavigationBar(
-        height: 55,
-        backgroundColor: Colors.white,
-        color: Color(0xFF4DACB2),
-        animationDuration: Duration(milliseconds: 300),
-        // index: _currentIndex,
-        // onTap: (index){
-        //   setState(() {
-        //     _currentIndex = index;
-        //   });
-        // },
-        items: [
-        Icon(
-          Icons.home,
-          color: Colors.white,
-        ),
-        Icon(
-          Icons.book_outlined, 
-          color: Colors.white,
-        ),
-        Icon(
-          Icons.signal_cellular_alt_outlined, 
-          color: Colors.white,
-        ),
-        Icon(
-          Icons.person, 
-          color: Colors.white,
-        ),
-      ]),
+      // bottomNavigationBar: CurvedNavigationBar(
+      //   height: 55,
+      //   backgroundColor: Colors.white,
+      //   color: Color(0xFF4DACB2),
+      //   animationDuration: Duration(milliseconds: 300),
+      //   // index: _currentIndex,
+      //   // onTap: (index){
+      //   //   setState(() {
+      //   //     _currentIndex = index;
+      //   //   });
+      //   // },
+      //   items: [
+      //   Icon(
+      //     Icons.home,
+      //     color: Colors.white,
+      //   ),
+      //   Icon(
+      //     Icons.book_outlined, 
+      //     color: Colors.white,
+      //   ),
+      //   Icon(
+      //     Icons.signal_cellular_alt_outlined, 
+      //     color: Colors.white,
+      //   ),
+      //   Icon(
+      //     Icons.person, 
+      //     color: Colors.white,
+      //   ),
+      // ]),
     );
   }
 }

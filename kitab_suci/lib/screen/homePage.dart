@@ -335,7 +335,7 @@ class _homepageState extends State<homepage> {
                                   Icons.menu_book_rounded,
                                   color: Colors.white,
                                 ),
-                              ),
+                              ), 
                             ),
                             SizedBox(width: 5),
                             Text(
@@ -775,6 +775,7 @@ class _homepageState extends State<homepage> {
             
               Container(
                 child: Row(
+                  mainAxisAlignment:MainAxisAlignment.center,
                   children: [
                     InkWell(
                       onTap: () {
@@ -785,8 +786,8 @@ class _homepageState extends State<homepage> {
                       },
                       child: Container(
                         height: 45,
-                        width: 115,
-                        margin: EdgeInsets.only(right: 10),
+                        width: 350,
+                        // margin: EdgeInsets.only(right: 10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20.0),
                           border: Border.all(
@@ -826,55 +827,55 @@ class _homepageState extends State<homepage> {
                       ),
                     ),
 
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => editProfil()),
-                        );
-                      },
-                      child: Container(
-                        height: 45,
-                        width: 125,
-                        margin: EdgeInsets.only(right: 10),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          border: Border.all(
-                            color: Colors.black,
-                            width: 1,
-                          ),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              height: 35,
-                              width: 35,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xFF4DACB2),
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.menu_book_rounded,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
+                    // InkWell(
+                    //   onTap: () {
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(builder: (context) => editProfil()),
+                    //     );
+                    //   },
+                    //   child: Container(
+                    //     height: 45,
+                    //     width: 125,
+                    //     margin: EdgeInsets.only(right: 10),
+                    //     decoration: BoxDecoration(
+                    //       borderRadius: BorderRadius.circular(20.0),
+                    //       border: Border.all(
+                    //         color: Colors.black,
+                    //         width: 1,
+                    //       ),
+                    //     ),
+                    //     child: Row(
+                    //       mainAxisAlignment: MainAxisAlignment.center,
+                    //       children: [
+                    //         Container(
+                    //           height: 35,
+                    //           width: 35,
+                    //           decoration: BoxDecoration(
+                    //             shape: BoxShape.circle,
+                    //             color: Color(0xFF4DACB2),
+                    //           ),
+                    //           child: Center(
+                    //             child: Icon(
+                    //               Icons.menu_book_rounded,
+                    //               color: Colors.white,
+                    //             ),
+                    //           ),
+                    //         ),
                             
-                            SizedBox(width: 5),
+                    //         SizedBox(width: 5),
 
-                            Text(
-                              "Al-Qur'an",
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Color(0xFF000000),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
+                    //         Text(
+                    //           "Al-Qur'an",
+                    //           style: TextStyle(
+                    //             fontSize: 16,
+                    //             color: Color(0xFF000000),
+                    //           ),
+                    //         )
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
@@ -1250,7 +1251,7 @@ class _homepageState extends State<homepage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
 
                                     Text(
@@ -1261,6 +1262,15 @@ class _homepageState extends State<homepage> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
+
+                                    SizedBox(width: 50),
+
+                                    CloseButton(
+                                      color: Colors.grey,
+                                      // onPressed: (){
+                                      //   debugPrint("Do Something");
+                                      // },
+                                    )
 
                                     // IconButton(
                                     //   onPressed: () {
