@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kitab_suci/screen/accountPage.dart';
-import 'package:kitab_suci/screen/bible.dart';
-import 'package:kitab_suci/screen/editProfil.dart';
-import 'package:kitab_suci/screen/favoritePage.dart';
-import 'package:kitab_suci/screen/askgpt.dart';
 import 'package:kitab_suci/screen/introPage.dart';
 import 'package:kitab_suci/screen/introPage2.dart';
 import 'package:kitab_suci/screen/loginPage.dart';

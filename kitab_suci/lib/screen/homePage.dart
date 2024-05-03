@@ -77,11 +77,11 @@ class _homepageState extends State<homepage> {
       case 0:
         return Center(
           child: case0(),
-      );
+        );
       case 1:
         return Center(
           child: case1(),
-      );
+        );
       case 2:
         return Center(
           child: case2(),
