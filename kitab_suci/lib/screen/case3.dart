@@ -46,7 +46,7 @@ class case3State extends State<case3> {
   bool _secureText = true;
   // bool _isFavorited = false;
   TextEditingController _editController = TextEditingController();
-  ValueNotifier<bool> _isFavorited = ValueNotifier<bool>(false);
+  // ValueNotifier<bool> _isFavorited = ValueNotifier<bool>(false);
   
   void initState() {
     super.initState();
@@ -709,8 +709,6 @@ class case3State extends State<case3> {
   );
 }
 
-
-
   Widget _buildAboutUsContent() {
   return Container(
       child: Padding(
@@ -824,5 +822,4 @@ class case3State extends State<case3> {
     );
 }
 
-  
 }
