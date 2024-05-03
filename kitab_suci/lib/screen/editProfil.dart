@@ -1,7 +1,4 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:kitab_suci/screen/loginPage.dart';
-import 'package:kitab_suci/screen/editProfil.dart';
 import 'package:kitab_suci/screen/homePage.dart';
 
 class editProfil extends StatefulWidget {

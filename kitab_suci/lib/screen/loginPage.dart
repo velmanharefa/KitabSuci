@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kitab_suci/screen/forgotPassword.dart';
-import 'package:kitab_suci/screen/intropage2.dart';
 import 'package:kitab_suci/screen/intropage3.dart';
 
 class loginPage extends StatefulWidget {

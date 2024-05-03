@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kitab_suci/screen/loginPage.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class favoritePage extends StatefulWidget {
   const favoritePage({super.key});

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kitab_suci/screen/accountPage.dart';
+import 'package:kitab_suci/screen/bible.dart';
 import 'package:kitab_suci/screen/editProfil.dart';
 import 'package:kitab_suci/screen/favoritePage.dart';
 import 'package:kitab_suci/screen/askgpt.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),useMaterial3: true,),
-      home: halo(),
+      home: homepage(),
     );
   }
 }
