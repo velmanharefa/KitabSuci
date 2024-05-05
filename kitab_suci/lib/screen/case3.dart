@@ -3,8 +3,14 @@ import 'package:kitab_suci/screen/homePage.dart';
 
 class FavoriteIcon extends StatefulWidget {
   final ValueNotifier<bool> isFavorited;
+  final VoidCallback? onPressed;
 
-  const FavoriteIcon({required this.isFavorited, Key? key}) : super(key: key);
+  const FavoriteIcon({
+    required this.isFavorited,
+    this.onPressed, // Deklarasikan parameter onPressed
+    Key? key
+  }) : super(key: key);
+
 
   @override
   _FavoriteIconState createState() => _FavoriteIconState();
@@ -22,11 +28,7 @@ class _FavoriteIconState extends State<FavoriteIcon> {
               : Icon(Icons.favorite_border, color: Colors.black);
         },
       ),
-      onPressed: () {
-        setState(() {
-          widget.isFavorited.value = !widget.isFavorited.value;
-        });
-      },
+      onPressed: widget.onPressed,
     );
   }
 }
@@ -40,6 +42,7 @@ class case3 extends StatefulWidget {
 
 class case3State extends State<case3> {
   List<ValueNotifier<bool>> _favoriteStatusList = [];
+  List<bool> _isVisibleList = [];
   bool _isEditingProfile = false;
   bool _isFavorite = false;
   bool _isAboutUs = false;
@@ -50,8 +53,8 @@ class case3State extends State<case3> {
   
   void initState() {
     super.initState();
-    // Inisialisasi status favorit
-    _favoriteStatusList = List.generate(10, (_) => ValueNotifier<bool>(false));
+    _favoriteStatusList = List.generate(10, (_) => ValueNotifier<bool>(true));
+    _isVisibleList = List.generate(10, (_) => true);
   }
 
   void _back() {
@@ -100,12 +103,11 @@ class case3State extends State<case3> {
     );
   }
 
-  // void _toggleFavorite() {
-  //   setState(() {
-  //     _isFavorited = !_isFavorited;
-  //   });
-  // }
-
+  void _setIsVisible(int index, bool isVisible) {
+    setState(() {
+      _isVisibleList[index] = isVisible;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -548,11 +550,10 @@ class case3State extends State<case3> {
 }
 
   Widget _buildFavoriteContent() {
-  return SingleChildScrollView(
-    child: Container(
+    return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       child: Column(
-        children: <Widget>[
+        children: [
           SizedBox(height: 30),
           Container(
             width: 500,
@@ -629,86 +630,99 @@ class case3State extends State<case3> {
             ),
           ),
           SizedBox(height: 10),
-          // favorite container
-          Column(
-            children: List.generate(
-              _favoriteStatusList.length,
-              (index) => Column(
-                children: [
-                  Container(
-                    child: InkWell(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Alkitab ${index + 1}',
-                              style: TextStyle(
-                                color: Color(0xFF000000),
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                          FavoriteIcon(isFavorited: _favoriteStatusList[index]),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: InkWell(
-                      child: Container(
-                        alignment: Alignment.topLeft,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: List.generate(
+                  _favoriteStatusList.length,
+                  (index) => _isVisibleList[index]
+                      ? Column(
                           children: [
-                            Text(
-                              'Lukas 1 : 2',
-                              style: TextStyle(
-                                color: Color(0xFF8A8A8A),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            Text(
-                              'Aku berkata kepadamu : Demikian juga akan ada sukacita di sorga karena satu ',
-                              style: TextStyle(
-                                color: Color(0xFF8A8A8A),
-                                fontSize: 16,
-                                fontWeight: FontWeight.normal,
-                              ),
-                            ),
-                            GestureDetector(
-                              // onTap: _notification,
-                              child: Container(
-                                width: 15,
-                                height: 15,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Color(0xFFD9D9D9),
-                                  // color: Colors.grey[200],
+                            Container(
+                              child: InkWell(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        'Alkitab ${index + 1}',
+                                        style: TextStyle(
+                                          color: Color(0xFF000000),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ),
+                                    FavoriteIcon(
+                                      isFavorited: _favoriteStatusList[index],
+                                      // Tambahkan fungsi onPressed untuk mengubah status visible
+                                      onPressed: () {
+                                        _setIsVisible(index, false);
+                                      },
+                                    ),
+                                  ],
                                 ),
-                                child: Icon(Icons.more_horiz, color: Colors.black, size: 15,),
                               ),
                             ),
+                            Container(
+                              child: InkWell(
+                                child: Container(
+                                  alignment: Alignment.topLeft,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Lukas 1 : 2',
+                                        style: TextStyle(
+                                          color: Color(0xFF8A8A8A),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Aku berkata kepadamu : Demikian juga akan ada sukacita di sorga karena satu ',
+                                        style: TextStyle(
+                                          color: Color(0xFF8A8A8A),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        // onTap: _notification,
+                                        child: Container(
+                                          width: 15,
+                                          height: 15,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Color(0xFFD9D9D9),
+                                            // color: Colors.grey[200],
+                                          ),
+                                          child: Icon(Icons.more_horiz,
+                                              color: Colors.black, size: 15),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 10),
                           ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                ],
+                        )
+                      : SizedBox(), // Jika konten tidak terlihat, gunakan SizedBox
+                ),
               ),
             ),
           ),
         ],
       ),
-    ),
-  );
-}
-
+    );
+  }
+  
   Widget _buildAboutUsContent() {
   return Container(
       child: Padding(

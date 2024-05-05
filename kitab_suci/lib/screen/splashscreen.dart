@@ -14,7 +14,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   @override
   void initState() {
     // TODO: implement initState
-    Timer(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 5), () {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => const introPage()));
     });
@@ -29,20 +29,20 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
         child: RichText(
           text: TextSpan(
             style: TextStyle(
-              fontSize: 48, // Ukuran font yang lebih besar
+              fontSize: 48, 
               fontWeight: FontWeight.bold,
             ),
             children: [
               TextSpan(
                 text: 'Kitab',
                 style: TextStyle(
-                  color: Color(0xFF4DACB2), // Warna untuk "Kitab"
+                  color: Color(0xFF4DACB2), 
                 ),
               ),
               TextSpan(
                 text: 'Suci',
                 style: TextStyle(
-                  color: Colors.black, // Warna untuk "Suci"
+                  color: Colors.black, 
                 ),
               ),
             ],
