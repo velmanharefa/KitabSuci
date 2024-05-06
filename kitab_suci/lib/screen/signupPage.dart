@@ -58,12 +58,11 @@ class _singUpPageState extends State<singUpPage> {
                     IconButton(
                       icon: const Icon(Icons.arrow_back),
                       onPressed: _back,
-                      color: Color(0xFFABABAB),
+                      color: Color(0xFF4DACB2),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 10),
               Container(
                 width: 320,
                 // decoration: BoxDecoration(
@@ -89,7 +88,7 @@ class _singUpPageState extends State<singUpPage> {
                       child: Text(
                         "Create a new account",
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFFABABAB), 
                         ),
                       ),
@@ -107,10 +106,10 @@ class _singUpPageState extends State<singUpPage> {
                   // Inputan Register
                     TextField(
                       decoration: InputDecoration(
-                        hintText: "enter your name",
+                        hintText: "Enter your name",
                         labelText: "Full Name",
                         labelStyle: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFF4DACB2),
                         )
                       ),
@@ -118,10 +117,10 @@ class _singUpPageState extends State<singUpPage> {
                     ),
                     TextField(
                       decoration: InputDecoration(
-                        hintText: "what do we call you?",
+                        hintText: "What do we call you?",
                         labelText: "Nickname",
                         labelStyle: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFF4DACB2),
                         )
                       ),
@@ -132,7 +131,7 @@ class _singUpPageState extends State<singUpPage> {
                         hintText: "example@email.com",
                         labelText: "Email",
                         labelStyle: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFF4DACB2),
                         )
                       ),
@@ -140,10 +139,10 @@ class _singUpPageState extends State<singUpPage> {
                     ),
                     TextField(
                       decoration: InputDecoration(
-                        hintText: "enter password",
+                        hintText: "Enter password",
                         labelText: "Password",
                         labelStyle: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFF4DACB2),
                         ),
                         suffixIcon: IconButton(
@@ -160,7 +159,7 @@ class _singUpPageState extends State<singUpPage> {
                     ),
                     SizedBox(height: 15),
                     Container(
-                  child: Text(
+                    child: Text(
                     "Your password must be 8-20 characters long, contain letters and number, and must not contain spaces, special character, or emoji.",
                     style: TextStyle(
                       fontSize: 12,
@@ -168,7 +167,7 @@ class _singUpPageState extends State<singUpPage> {
                         ),
                       ),
                     ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 10),
                   Container(
                 margin: const EdgeInsets.only(top: 10),
                     alignment: Alignment.center,
@@ -188,7 +187,7 @@ class _singUpPageState extends State<singUpPage> {
                       ),
                     ),
                 ),
-              SizedBox(height: 150)
+              SizedBox(height: 180)
                         ],
                       )
                   ),

@@ -24,7 +24,6 @@ class _loginPageState extends State<loginPage> {
       context, MaterialPageRoute(builder: (context) => const introPage3()));
   }
 
-
   @override
   void dispose() {
     _scrollController.dispose();
@@ -36,6 +35,7 @@ class _loginPageState extends State<loginPage> {
         duration: Duration(milliseconds: 70), curve: Curves.easeInOut);
     FocusScope.of(context).unfocus();
   }
+
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -51,12 +51,6 @@ class _loginPageState extends State<loginPage> {
               Container(
                 height: 35,
                 margin: EdgeInsets.only(left: 20),
-                // decoration: BoxDecoration(
-                //   border: Border.all(
-                //     color: Colors.black,
-                //     width: 2,
-                //   )
-                // ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -68,15 +62,8 @@ class _loginPageState extends State<loginPage> {
                   ],
                 ),
               ),
-              // SizedBox(height: 1),
               Container(
                 width: 320,
-                // decoration: BoxDecoration(
-                //   border: Border.all(
-                //     color: Colors.black, // Warna outline
-                //     width: 2, // Ketebalan outline
-                //   ),
-                // ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -86,7 +73,7 @@ class _loginPageState extends State<loginPage> {
                         "Welcome!",
                         style: TextStyle(
                           fontSize: 48,
-                          color: Color(0xFF4DACB2), 
+                          color: Color(0xFF4DACB2),
                         ),
                       ),
                     ),
@@ -95,24 +82,20 @@ class _loginPageState extends State<loginPage> {
                         "Sign in to continue",
                         style: TextStyle(
                           fontSize: 16,
-                          color: Color(0xFFABABAB), 
+                          color: Color(0xFFABABAB),
                         ),
                       ),
                     )
                   ],
-                )
+                ),
               ),
-              
               SizedBox(height: 10),
-
               Container(
                 child: Image.asset(
                   'assets/images/loginpic.png',
                 ),
               ),
-
               SizedBox(height: 10),
-              
               Container(
                 width: 300,
                 child: SingleChildScrollView(
@@ -128,16 +111,12 @@ class _loginPageState extends State<loginPage> {
                             fontSize: 14,
                             color: Color(0xFF4DACB2),
                           ),
-                          // border: InputBorder.none,
-                          // fillColor: Colors.grey,
-                          // filled: true,
                         ),
                       ),
                       TextField(
                         decoration: InputDecoration(
                           hintText: "Enter password",
                           labelText: "Password",
-                          // border: OutlineInputBorder(),
                           labelStyle: TextStyle(
                             fontSize: 14,
                             color: Color(0xFF4DACB2),
@@ -155,69 +134,56 @@ class _loginPageState extends State<loginPage> {
                         obscureText: _secureText,
                         maxLength: 10,
                       ),
-
-                    SizedBox(height: 10),
-                    
-                    Container(
-                      margin: const EdgeInsets.only(top: 10),
-                          alignment: Alignment.center,
-                          child: ElevatedButton(
-                            onPressed: _login,
-                            style: ElevatedButton.styleFrom(
-                              foregroundColor: const Color.fromARGB(255, 255, 255, 255),
-                              backgroundColor: const Color(0xff4DACB2), // Ubah warna teks
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              minimumSize: const Size(217, 51),
+                      SizedBox(height: 10),
+                      Container(
+                        margin: const EdgeInsets.only(top: 10),
+                        alignment: Alignment.center,
+                        child: ElevatedButton(
+                          onPressed: _login,
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                            backgroundColor: const Color(0xff4DACB2),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
                             ),
-                            child: const Text(
-                              'Login',
-                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                            ),
+                            minimumSize: const Size(217, 51),
                           ),
-                    ),
-
-
-                    // SizedBox(height: 10),
-
-                    Container(
+                          child: const Text(
+                            'Login',
+                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                      Container(
                         width: 300,
-                        // decoration: BoxDecoration(
-                        //   border: Border.all(
-                        //     color: Colors.black, // Warna outline
-                        //     width: 2, // Ketebalan outline
-                        //   ),
-                        // ),
                         child: InkWell(
-                        child: const Text(
-                          textAlign: TextAlign.center,
-                          'Forgot password?',
-                          style: TextStyle(
+                          child: const Text(
+                            textAlign: TextAlign.center,
+                            'Forgot password?',
+                            style: TextStyle(
                               fontSize: 14,
                               color: Color(0xFFABABAB),
                             ),
-                        ),
-                        onTap: () {
-                          Navigator.push(
+                          ),
+                          onTap: () {
+                            Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const forgotPassword()));
-                        },
+                                builder: (context) => const forgotPassword(),
+                              ),
+                            );
+                          },
+                        ),
                       ),
-                    ),
-
                     ],
-                  )
+                  ),
                 ),
               ),
-
+              SizedBox(height: 160)
             ],
           ),
         ),
       ),
     );
   }
-
 }
-

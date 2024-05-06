@@ -109,6 +109,28 @@ class case3State extends State<case3> {
     });
   }
 
+  void _showPopup() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Lukas 1 : 2"),
+          content: Text(
+            "Aku berkata kepadamu : Demikian juga akan ada sukacita di sorga karena satu",
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Close'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_isEditingProfile) {
@@ -657,7 +679,6 @@ class case3State extends State<case3> {
                                     ),
                                     FavoriteIcon(
                                       isFavorited: _favoriteStatusList[index],
-                                      // Tambahkan fungsi onPressed untuk mengubah status visible
                                       onPressed: () {
                                         _setIsVisible(index, false);
                                       },
@@ -692,17 +713,19 @@ class case3State extends State<case3> {
                                         ),
                                       ),
                                       GestureDetector(
-                                        // onTap: _notification,
+                                        onTap: _showPopup,
                                         child: Container(
                                           width: 15,
                                           height: 15,
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,
                                             color: Color(0xFFD9D9D9),
-                                            // color: Colors.grey[200],
                                           ),
-                                          child: Icon(Icons.more_horiz,
-                                              color: Colors.black, size: 15),
+                                          child: Icon(
+                                            Icons.more_horiz,
+                                            color: Colors.black,
+                                            size: 15,
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -713,7 +736,7 @@ class case3State extends State<case3> {
                             SizedBox(height: 10),
                           ],
                         )
-                      : SizedBox(), // Jika konten tidak terlihat, gunakan SizedBox
+                      : SizedBox(), 
                 ),
               ),
             ),

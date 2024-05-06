@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kitab_suci/screen/case1.dart';
 import 'package:kitab_suci/screen/loginPage.dart';
 
 class case0 extends StatefulWidget {
@@ -14,26 +15,19 @@ class case0State extends State<case0> {
         context, MaterialPageRoute(builder: (context) => const loginPage()));
   }
   
+  
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical:  10, horizontal: 20),
         child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SizedBox(height: 30),
           Container(
             width: 500,
             height: 40,
-            // decoration: BoxDecoration(
-            //   border: Border.all(
-            //     color: Colors.black,
-            //     width: 2,
-            //   )
-            // ),
             child: Row(
-              // crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 
@@ -47,19 +41,18 @@ class case0State extends State<case0> {
                   ),
                 ),
         
-                GestureDetector(
-                  onTap: _notification,
-                  child: Container(
-                    width: 40, 
-                    height: 40, 
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xFF4DACB2),
-                      // color: Colors.grey[200], 
-                    ),
-                    child: Icon(Icons.notifications_none_rounded, color: Colors.white),
-                  ),
-                ),           
+                // GestureDetector(
+                //   onTap: _notification,
+                //   child: Container(
+                //     width: 40, 
+                //     height: 40, 
+                //     decoration: BoxDecoration(
+                //       shape: BoxShape.circle,
+                //       color: Color(0xFF4DACB2),
+                //     ),
+                //     child: Icon(Icons.notifications_none_rounded, color: Colors.white),
+                //   ),
+                // ),           
               ],
             ),
           ),
@@ -67,12 +60,6 @@ class case0State extends State<case0> {
           Container(
             width: 500,
             height: 25,
-            // decoration: BoxDecoration(
-            //   border: Border.all(
-            //     color: Colors.black,
-            //     width: 2,
-            //   )
-            // ),
             child: Text(
               'let’s read some word of God',
               style: TextStyle(
@@ -132,12 +119,6 @@ class case0State extends State<case0> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  // onTap: (){
-                  //   Navigator.push(
-                  //     context, 
-                  //     MaterialPageRoute(
-                  //       builder: (context) => const loginPage()));
-                  // },
                 ),
         
                 InkWell(
@@ -149,12 +130,12 @@ class case0State extends State<case0> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  // onTap: (){
-                  //   Navigator.push(
-                  //     context, 
-                  //     MaterialPageRoute(
-                  //       builder: (context) => const loginPage()));
-                  // },
+                  onTap: (){
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute(
+                        builder: (context) => case1()));
+                  },
                 ),
               ],
             ),

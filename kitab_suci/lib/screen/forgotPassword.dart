@@ -58,12 +58,11 @@ class _forgotPasswordState extends State<forgotPassword> {
                     IconButton(
                       icon: const Icon(Icons.arrow_back),
                       onPressed: _back,
-                      color: Color(0xFFABABAB),
+                      color: Color(0xFF4DACB2),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 10),
               Container(
                 width: 320,
                 // decoration: BoxDecoration(
@@ -109,10 +108,10 @@ class _forgotPasswordState extends State<forgotPassword> {
                   // Inputan Register
                     TextField(
                       decoration: InputDecoration(
-                        hintText: "enter your email",
+                        hintText: "Enter your email",
                         labelText: "Email",
                         labelStyle: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFF4DACB2),
                         )
                       ),
@@ -121,10 +120,10 @@ class _forgotPasswordState extends State<forgotPassword> {
                     
                     TextField(
                       decoration: InputDecoration(
-                        hintText: "enter your new password",
+                        hintText: "Enter your new password",
                         labelText: "New Password",
                         labelStyle: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFF4DACB2),
                         ),
                         suffixIcon: IconButton(
@@ -141,10 +140,10 @@ class _forgotPasswordState extends State<forgotPassword> {
                     ),
                     TextField(
                       decoration: InputDecoration(
-                        hintText: "confirm your new password",
+                        hintText: "Confirm your new password",
                         labelText: "Confirm Password",
                         labelStyle: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color(0xFF4DACB2),
                         ),
                         suffixIcon: IconButton(
@@ -169,7 +168,7 @@ class _forgotPasswordState extends State<forgotPassword> {
                         ),
                       ),
                     ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 10),
                   Container(
                 margin: const EdgeInsets.only(top: 10),
                     alignment: Alignment.center,
@@ -189,14 +188,14 @@ class _forgotPasswordState extends State<forgotPassword> {
                       ),
                     ),
                 ),
-              SizedBox(height: 150)
-                        ],
-                      )
-                  ),
-                ]
+                SizedBox(height: 180)
+                ],
+                )
               ),
+            ]
           ),
-        )
-      );
+        ),
+      )
+    );
   }
 }

@@ -152,19 +152,19 @@ class _case1State extends State<case1> {
                         style: TextStyle(fontSize: 32, color: Color(0xff000000)),
                       ),
                     ),
-                    GestureDetector(
-                      onTap: _notification,
-                      child: Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color(0xFF4DACB2),
-                        ),
-                        child: Icon(Icons.notifications_none_rounded,
-                            color: Colors.white),
-                      ),
-                    ),
+                    // GestureDetector(
+                    //   onTap: _notification,
+                    //   child: Container(
+                    //     width: 40,
+                    //     height: 40,
+                    //     decoration: BoxDecoration(
+                    //       shape: BoxShape.circle,
+                    //       color: Color(0xFF4DACB2),
+                    //     ),
+                    //     child: Icon(Icons.notifications_none_rounded,
+                    //         color: Colors.white),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

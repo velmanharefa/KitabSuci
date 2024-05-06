@@ -36,20 +36,14 @@ class _introPage3State extends State<introPage3> {
       
           Container(
             width: 360,
-            // decoration: BoxDecoration(
-            //   border: Border.all(
-            //     color: Colors.black, // Warna outline
-            //     width: 2, // Ketebalan outline
-            //   ),
-            // ),
             alignment: Alignment.centerRight,
-            // margin: EdgeInsets.only(right: 20, left: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
                   icon: const Icon(Icons.arrow_back),
                   onPressed: _back,
+                  color: Color(0xFF4DACB2),
                   ),
                   SizedBox(
                     width: 230,
@@ -83,9 +77,6 @@ class _introPage3State extends State<introPage3> {
 
           Container(
             alignment: Alignment.center,
-            // width: 380,
-            // height: 250,
-            
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -96,7 +87,7 @@ class _introPage3State extends State<introPage3> {
                 SizedBox(height: 8,),
 
                 Text(
-                  "Selamat Membaca",
+                  "Happy Reading",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -106,7 +97,7 @@ class _introPage3State extends State<introPage3> {
 
                 SizedBox(height: 15),
                 Text(
-                  "“Lebih baik kehilangan sesuatu demi Tuhan. Daripada kehilangan Tuhan demi sesuatu”",
+                  "“It's better to lose something for God's sake. Rather than losing God because of something”",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 14,

@@ -29,20 +29,14 @@ class _introPage2State extends State<introPage2> {
           ),
           Container(
             width: 360,
-            // decoration: BoxDecoration(
-            //   border: Border.all(
-            //     color: Colors.black, // Warna outline
-            //     width: 2, // Ketebalan outline
-            //   ),
-            // ),
             alignment: Alignment.centerRight,
-            // margin: EdgeInsets.only(right: 20, left: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
                   icon: const Icon(Icons.arrow_back),
                   onPressed: _back,
+                  color: Color(0xFF4DACB2),
                   ),
                   SizedBox(
                     width: 230,
@@ -86,13 +80,13 @@ class _introPage2State extends State<introPage2> {
 
           Container(
             alignment: Alignment.center,
-            width: 380,//kiri kanan
+            width: 350,//kiri kanan
             height: 130,//atas bawah
             child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Akses Bebas',
+                'Free Access',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -101,7 +95,7 @@ class _introPage2State extends State<introPage2> {
               ),
               SizedBox(height: 19),
               Text(
-                'Kami menyediakan kitab yang dapat di akses dimanapun kalian berada',
+                'We provide holy books that can be accessed wherever you are',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14,
@@ -117,7 +111,7 @@ class _introPage2State extends State<introPage2> {
             ),
 
           Container(
-            margin: const EdgeInsets.only(top: 10),
+            margin: const EdgeInsets.only(top: 3),
                 alignment: Alignment.center,
                 child: ElevatedButton(
                   onPressed: _next,

@@ -23,20 +23,10 @@ class _introPageState extends State<introPage> {
           SizedBox(
             height: 60,
           ),
-
-
-
           Container(
             width: 336,
-            // decoration: BoxDecoration(
-            //   border: Border.all(
-            //     color: Colors.black, // Warna outline
-            //     width: 2, // Ketebalan outline
-            //   ),
-            // ),
             alignment: Alignment.centerRight,
-            // padding:EdgeInsets.all(15),
-            // margin: EdgeInsets.only(right: 20, left: 20),
+            margin: EdgeInsets.only(right: 20, left: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -56,8 +46,7 @@ class _introPageState extends State<introPage> {
                     fontSize: 20, 
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Inter',
-                    
-                    ),
+                  ),
                 ),
                 onTap: () {
                   Navigator.push(
