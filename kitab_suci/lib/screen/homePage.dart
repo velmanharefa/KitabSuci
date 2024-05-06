@@ -80,7 +80,7 @@ class _homepageState extends State<homepage> {
         );
       case 1:
         return Center(
-          child: Case1(),
+          child: case1(),
         );
       case 2:
         return Center(
